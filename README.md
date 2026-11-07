@@ -1,75 +1,36 @@
-# React + TypeScript + Vite
+# MM25 — Híbrido Alto Rendimiento
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El cliente elige horarios de fútbol publicados por el entrenador. Esta etapa refuerza componentes, props y estado en React, con prácticas evaluadas y Spec-Driven Development. El alumno intenta primero; hay pistas antes de la solución. No se avanza de fase automáticamente.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React 19, TypeScript, Vite 8 y Tailwind 4 (`package.json`, `vite.config.ts`, `src/index.css`). Entrada: `index.html` → `src/main.tsx` → `src/App.tsx` (un título). En dependencias, sin uso en `src/`: `react-router-dom`, `axios`, `react-hook-form` y `zod`. Scripts: `dev`, `build`, `lint`, `preview`. No hay script de tests.
 
-## React Compiler
+## Alcance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+MM25 es independiente de Wix: sin SDK ni APIs de Wix. Servidor y datos propios quedan para después; la tecnología está pendiente. Independencia no significa hosting ni notificaciones gratis.
 
-## Expanding the ESLint configuration
+Un solo negocio. Fuera: multinegocio, chat, recompensas y eventos. Cupos reales, pagos, cancelación y lo no acordado siguen pendientes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Planes acordados, todavía no implementados:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Elite: S/300, 2 entrenamientos por semana, ciclo de 4 semanas, personalizado, evaluación y seguimiento.
+- Alto Rendimiento: S/350 al mes, 3 clases por semana y 12 al mes, grupos reducidos, evaluación, seguimiento y recuperación. El anuncio dice que no son reprogramables.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+No usar precios de la referencia ajena (S/500 y S/1200). Fase 1: datos de ejemplo, sin backend. Un rol en la interfaz no es seguridad.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estado
 
-```
+Implementación pendiente. Spec de fase 1: `docs/specs/001-horarios.md`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Cómo retomar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Móvil en la nube y laptop en el IDE se alinean con Git (commit, push y pull). Los archivos locales no se sincronizan solos.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Metodología
 
-```
+Ciclo: spec, criterios, intento del alumno, pruebas, explicación y corrección. React y SDD se evalúan por separado. El estado se practica con [Full Stack Open](https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps). Especificar se practica con [MIT 6.031](https://web.mit.edu/6.031/www/sp21/classes/06-specifications/). No es un curso oficial de SDD con IA.
+
+## Pregunta inicial
+
+Para seleccionar un horario, ¿qué hay que guardar en el estado y qué puede seguir solo en la lista? Contesta antes de codear.
