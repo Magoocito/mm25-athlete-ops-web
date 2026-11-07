@@ -1,0 +1,19 @@
+---
+description: Acuerdos MM25. Consultar antes de escribir o ampliar el producto.
+alwaysApply: true
+---
+
+# MM25
+
+- Independiente de Wix: sin SDK ni APIs Wix. Servidor y datos propios, tecnología pendiente. Independencia no incluye hosting ni notificaciones gratis.
+- Un negocio. Excluir multinegocio, chat, recompensas y eventos.
+- El cliente elige horarios publicados por el entrenador.
+- Elite: S/300, 2 entrenamientos/semana, ciclo de 4 semanas, personalizado, evaluación y seguimiento.
+- Alto Rendimiento: S/350/mes, 3 clases/semana y 12/mes, grupos reducidos, evaluación, seguimiento y recuperación. El anuncio dice que no son reprogramables.
+- No usar precios de referencia PRO (S/500, S/1200). Cupos, pagos y cancelación reales están pendientes.
+- Fase 1: datos de ejemplo etiquetados, sin backend. Un rol en la interfaz no es seguridad. Spec: `docs/specs/001-horarios.md` (no reservar ni cobrar).
+- El alumno intenta primero. Pistas antes de la solución. No avanzar de fase solo. No entregar código solución si no lo piden. La pregunta de estado del README se responde sin código.
+- Evaluar React (componentes, props, estado) y SDD por separado.
+- Nube (móvil) y laptop (IDE) se alinean con Git. No sincronizar archivos locales automáticamente.
+- Ahorro: una tarea, archivos pertinentes, respuestas cortas. No reauditar, refactor ni dependencias no pedidas.
+- Las capturas PRO Amateur son referencia ajena, no requisitos.
